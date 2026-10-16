@@ -1,23 +1,102 @@
 aid: certinal
+
 name: Certinal
-description: 'Certinal is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Certinal provides a Healthcare Consent & Compliance Platform that digitizes consent capture, electronic signatures, and patient intake,
+  integrating directly with EHR systems such as Epic, Cerner, MEDITECH, and OpenEMR. The platform is designed for healthcare organizations to
+  meet regulatory requirements including HIPAA, 21 CFR Part 11, CMS‑0053‑F, DPDP, and PDPA, and to automate consent workflows across surgical,
+  clinical trial, telehealth, and general treatment contexts.
+
 url: https://raw.githubusercontent.com/api-evangelist/certinal/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-16 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-16'
+
 modified: '2026-10-16'
+
 tags:
-- Company
-apis: []
+- Healthcare
+- Consent
+- Compliance
+- eSignature
+- EHR Integration
+- Regulatory
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Vendors
+  url: vendors/certinal-vendors.yml
+- type: Spectral
+  url: rules/certinal-rules.yml
+- type: JSONLD
+  url: json-ld/certinal-context.jsonld
+- type: Vocabulary
+  url: vocabulary/certinal-vocabulary.yml
+- type: DataModel
+  url: data-model/certinal-data-model.yml
+- type: Authentication
+  url: authentication/certinal-authentication.yml
+- type: Conformance
+  url: conformance/certinal-conformance.yml
+- type: Hosts
+  url: hosts/certinal-hosts.yml
+- type: TermsOfService
+  url: https://www.certinal.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.certinal.com/privacy-policy
+- type: Pricing
+  url: https://www.certinal.com/pricing
+- type: Newsroom
+  url: https://www.certinal.com/press
+- type: Documentation
+  url: https://certinal.stoplight.io/docs/api/72b66de24898e-introduction
+- type: Blog
+  url: https://www.certinal.com/blog
+- type: DomainSecurity
+  url: security/certinal-domain-security.yml
 - type: Website
   url: https://certinal.com/
+
+apis:
+- aid: certinal:certinal-api
+  name: Certinal API
+  description: 'Certinal API as documented publicly: 2 operations. Contract generated from the documentation by API Evangelist (2026-10-16); not
+    the provider''s own document.'
+  humanURL: https://certinal.stoplight.io/docs/api/9dqxkpy0q8mci-create-a-transaction
+  baseURL: https://esign-staging.certinal.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/certinal-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/certinal-put-auth-v1-users-userid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/certinal-put-auth-v1-users-userid-response-schema.json
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Certinal documentation is rendered via JavaScript with no machine‑readable spec discovered.
+  evidence:
+  - url: https://certinal.stoplight.io/docs/api/openapi.json
+    status: 404
+  checked: '2026-10-16'
+x-enrichment:
+  date: '2026-10-16'
+  status: enriched
+  artifacts_added: 14
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

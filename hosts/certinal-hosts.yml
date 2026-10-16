@@ -1,0 +1,70 @@
+generated: '2026-10-16'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 5
+  own: 4
+  other_domain: 1
+  platform: 0
+  roles:
+  - api
+  - docs
+  - marketing
+  - other
+  - website
+hosts:
+- host: api.certinal.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: certinal.com
+  role: api
+  relation: own
+- host: certinal.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Website
+  serves: []
+  registrable_domain: certinal.com
+  role: website
+  relation: own
+- host: certinal.stoplight.io
+  found_by:
+  - pointer
+  - apis[]
+  - docs-index
+  types:
+  - Documentation
+  serves:
+  - docs
+  registrable_domain: stoplight.io
+  role: docs
+  relation: other-domain
+- host: esign-staging.certinal.com
+  found_by:
+  - apis[]
+  types: []
+  serves:
+  - api
+  registrable_domain: certinal.com
+  role: other
+  relation: own
+- host: www.certinal.com
+  found_by:
+  - pointer
+  types:
+  - TermsOfService
+  - PrivacyPolicy
+  - Pricing
+  - Newsroom
+  - Blog
+  serves: []
+  registrable_domain: certinal.com
+  role: marketing
+  relation: own

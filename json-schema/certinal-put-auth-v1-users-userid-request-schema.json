@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/certinal/main/json-schema/certinal-put-auth-v1-users-userid-request-schema.json",
+  "title": "PutAuthV1UsersUseridRequest",
+  "x-generated": "2026-10-16",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/certinal-openapi-generated.yml#/components/schemas/PutAuthV1UsersUseridRequest",
+  "type": "object",
+  "properties": {
+    "emailAddress": {
+      "type": "string"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "jobTitle": {
+      "type": "string"
+    },
+    "roles": {
+      "type": "array",
+      "description": "Array of role strings"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "phoneCountryCode": {
+      "type": "string"
+    },
+    "finalMailDisabled": {
+      "type": "boolean"
+    },
+    "reminderMailDisabled": {
+      "type": "boolean"
+    },
+    "senderMailDisabled": {
+      "type": "boolean"
+    }
+  }
+}

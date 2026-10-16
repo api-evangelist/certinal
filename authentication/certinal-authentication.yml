@@ -1,0 +1,19 @@
+generated: '2026-10-16'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://certinal.stoplight.io/docs/api/b6b6c2d4906e9-authentication
+sources:
+- https://certinal.stoplight.io/docs/api/b6b6c2d4906e9-authentication
+- https://certinal.stoplight.io/docs/api/q8v4vixymc0m7-o-auth-2-0-client-credentials-grant-flow-api
+- https://certinal.stoplight.io/docs/api/25t2fujer3i1u-remote-signing-with-email-or-sms-based-authentication
+- https://certinal.stoplight.io/docs/api/3fr7rwlmnk53b-in-person-signing-in-presence-of-a-staff
+schemes:
+- type: oauth2
+  name: OAuth2 Client Credentials
+  evidence: Certinal eSign supports the OAuth2 Client Credentials Grant to generate your access token with ease.
+  flows:
+  - client_credentials
+  token_url: https://esign-staging.certinal.com/auth/v1/token
+  how_to_obtain: Log in to your Certinal eSign account, go to the More tab, click Create Custom Integration, and copy your Client ID, Secret,
+    and API URL.
+docs: https://certinal.stoplight.io/docs/api/b6b6c2d4906e9-authentication

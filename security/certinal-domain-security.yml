@@ -1,0 +1,16 @@
+generated: '2026-10-16'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: certinal.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov 20 09:23:42 2026 GMT
+  hsts: false
+domains:
+- domain: certinal.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine

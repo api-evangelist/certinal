@@ -1,0 +1,58 @@
+{
+  "@context": {
+    "@vocab": "https://certinal.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "certinal": "https://certinal.com/schema#",
+    "PutAuthV1UsersUseridRequest": "certinal:PutAuthV1UsersUseridRequest",
+    "emailAddress": {
+      "@id": "certinal:emailAddress",
+      "@type": "xsd:string"
+    },
+    "firstName": {
+      "@id": "certinal:firstName",
+      "@type": "xsd:string"
+    },
+    "lastName": {
+      "@id": "certinal:lastName",
+      "@type": "xsd:string"
+    },
+    "jobTitle": {
+      "@id": "certinal:jobTitle",
+      "@type": "xsd:string"
+    },
+    "roles": {
+      "@id": "certinal:roles",
+      "@container": "@list"
+    },
+    "phoneNumber": {
+      "@id": "certinal:phoneNumber",
+      "@type": "xsd:string"
+    },
+    "phoneCountryCode": {
+      "@id": "certinal:phoneCountryCode",
+      "@type": "xsd:string"
+    },
+    "finalMailDisabled": {
+      "@id": "certinal:finalMailDisabled",
+      "@type": "xsd:boolean"
+    },
+    "reminderMailDisabled": {
+      "@id": "certinal:reminderMailDisabled",
+      "@type": "xsd:boolean"
+    },
+    "senderMailDisabled": {
+      "@id": "certinal:senderMailDisabled",
+      "@type": "xsd:boolean"
+    },
+    "PutAuthV1UsersUseridResponse": "certinal:PutAuthV1UsersUseridResponse"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Certinal API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Certinal's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-16) from openapi/_ae-authored/certinal-openapi-generated.yml.",
+  "dcterms:created": "2026-10-16",
+  "dcterms:source": [
+    "openapi/_ae-authored/certinal-openapi-generated.yml"
+  ]
+}
