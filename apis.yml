@@ -71,21 +71,34 @@ common:
   url: https://certinal.com/
 
 apis:
-- aid: certinal:certinal-api
-  name: Certinal API
-  description: 'Certinal API as documented publicly: 2 operations. Contract generated from the documentation by API Evangelist (2026-10-16); not
-    the provider''s own document.'
+- aid: certinal:certinal-auth-api
+  name: Certinal Auth API
+  description: The Auth API from Certinal — 1 operation(s) for auth.
   humanURL: https://certinal.stoplight.io/docs/api/9dqxkpy0q8mci-create-a-transaction
   baseURL: https://esign-staging.certinal.com
+  tags:
+  - Auth
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/certinal-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/certinal-auth-api-openapi.yml
   - type: JSONSchema
     url: json-schema/certinal-put-auth-v1-users-userid-request-schema.json
   - type: JSONSchema
     url: json-schema/certinal-put-auth-v1-users-userid-response-schema.json
-
+- aid: certinal:certinal-rssp-api
+  name: Certinal Rssp API
+  description: The Rssp API from Certinal — 1 operation(s) for rssp.
+  humanURL: https://certinal.stoplight.io/docs/api/9dqxkpy0q8mci-create-a-transaction
+  baseURL: https://esign-staging.certinal.com
+  tags:
+  - Rssp
+  properties:
+  - type: OpenAPI
+    url: openapi/certinal-rssp-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/certinal-put-auth-v1-users-userid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/certinal-put-auth-v1-users-userid-response-schema.json
 x-coverage:
   state: unreadable
   reason: js-rendered-docs

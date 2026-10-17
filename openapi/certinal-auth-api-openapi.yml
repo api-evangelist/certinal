@@ -1,0 +1,93 @@
+openapi: 3.2.0
+info:
+  title: Certinal Auth API
+  version: '2026-10-16'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-16: 2 operation(s) read from 2 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Certinal has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 1
+    documentation: 1
+    pages-with-code: 1
+    pages-read: 2
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-16'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://certinal.stoplight.io/docs/api/9dqxkpy0q8mci-create-a-transaction
+  - https://certinal.stoplight.io/docs/api/kq5txonjllkgt-update-user-api-guide
+servers:
+- url: https://esign-staging.certinal.com
+security:
+- bearer: []
+tags:
+- name: Auth
+paths:
+  /auth/v1/users/{userid}:
+    put:
+      operationId: put_auth_v1_users_userid
+      tags:
+      - Auth
+      summary: Update User API allows you to make changes to existing user profiles, such as…
+      x-source: https://certinal.stoplight.io/docs/api/kq5txonjllkgt-update-user-api-guide
+      parameters:
+      - name: userid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutAuthV1UsersUseridRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutAuthV1UsersUseridResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PutAuthV1UsersUseridResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: The user details have been successfully updated.
+        4XX:
+          type: string
+          description: If there’s an issue with the request (e.g., invalid user ID or missing required fields), an error response will be returned.
+    PutAuthV1UsersUseridRequest:
+      type: object
+      properties:
+        emailAddress:
+          type: string
+        firstName:
+          type: string
+        lastName:
+          type: string
+        jobTitle:
+          type: string
+        roles:
+          type: array
+          description: Array of role strings
+        phoneNumber:
+          type: string
+        phoneCountryCode:
+          type: string
+        finalMailDisabled:
+          type: boolean
+        reminderMailDisabled:
+          type: boolean
+        senderMailDisabled:
+          type: boolean
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
